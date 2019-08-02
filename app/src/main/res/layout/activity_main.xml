@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBackground"
+    tools:context=".MainActivity"
+    android:visibility="visible"
+    >
+
+
+
+
+    <LinearLayout
+        android:id="@+id/diffLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Difficulty"
+            android:textSize="30sp"
+            android:textColor="#1AFF00"
+            android:padding="20dp"
+            android:gravity="top"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:tag="0"
+            android:id="@+id/poc"
+            android:background="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/easy"
+            android:layout_centerInParent="true"
+            android:text="Piece of Cake"
+            android:onClick="setDifficulty"
+            />
+
+        <Button
+            android:tag="1"
+            android:id="@+id/easy"
+            android:background="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/medium"
+            android:layout_centerInParent="true"
+            android:text="Easy"
+            android:onClick="setDifficulty"
+            />
+
+        <Button
+            android:tag="2"
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:background="@drawable/back"
+            android:layout_centerInParent="true"
+            android:onClick="setDifficulty"
+            />
+
+        <Button
+            android:tag="3"
+            android:id="@+id/hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medium"
+            android:background="@drawable/back"
+            android:layout_centerInParent="true"
+            android:text="Hard"
+            android:onClick="setDifficulty"
+            />
+
+        <Button
+            android:tag="4"
+            android:id="@+id/bsc"
+            android:background="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hard"
+            android:layout_centerInParent="true"
+            android:text="Bat Shit Crazy"
+            android:onClick="setDifficulty"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/subtract"
+            android:layout_centerHorizontal="true"
+            android:onClick="setSumType"
+            android:tag="+"
+            android:background="@drawable/back"
+            android:text="Addition" />
+
+        <Button
+            android:id="@+id/subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/multiply"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/back"
+            android:onClick="setSumType"
+            android:tag="-"
+            android:text="Subtraction" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="setSumType"
+            android:tag="*"
+            android:background="@drawable/back"
+            android:text="Multiplication" />
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/multiply"
+            android:layout_centerHorizontal="true"
+            android:tag="/"
+            android:onClick="setSumType"
+            android:background="@drawable/back"
+            android:text="Division" />
+
+
+        <Button
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divide"
+            android:layout_centerHorizontal="true"
+            android:onClick="setSumType"
+            android:tag="+-*/"
+            android:background="@drawable/back"
+            android:text="All at Once" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:rotation="-20"
+        android:text="MATH \nTRAINER"
+        android:textSize="55sp"
+        android:textColor="#00FFD4"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
